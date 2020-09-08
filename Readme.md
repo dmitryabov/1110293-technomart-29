@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дмитрий Рябов](https://up.htmlacademy.ru/htmlcss/29/user/1110293).
-* Наставник: `Неизвестно`.
+* Наставник: [`Максим Петрищак`](https://htmlacademy.ru/profile/maksim_petrishchak).
 
 ---
 
