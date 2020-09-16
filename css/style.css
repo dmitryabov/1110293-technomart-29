@@ -1,0 +1,379 @@
+/* Variables */
+
+:root {
+  --basic-ferrara-blue: #293449;
+  --basic-background-color: #888888;
+  --basic-white: #ffffff;
+  --basic-white-grey: rgba(0, 0, 0, 0.0001);
+  --basic-grey-white: rgba(255, 255, 255, 0.5);
+  --basic-white-opacity: rgba(255, 255, 255, 0.3);
+  --basic-grey-opacity: rgba(197, 197, 197, 0.3);
+  --basic-dark-opacity: rgba(169, 169, 169, 0.3);
+  --basic-dark-gradient: linear-gradient(0deg, #212A3A, #212A3A);
+  --basic-green: #63A63E;
+  --basic-green-bright: #5FBB2D;
+  --basic-black-grey: #161D29;
+  --basic-black-dark: #000000;
+  --basic-red: #EE3643;
+  --basic-blue: #3BBCE3;
+  --basic-turquoise: #DC91D8;
+  --basic-khaki: #8ED78F;
+  --basic-gold: #FFC047;
+  --basic-gold-dark: #FFDA96;
+  --basic-background: #F1F5F7;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-greylight-light: #32425C;
+  --basic-greylight-dark: #1D2739;
+  --special-ylellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowligh: #FFD180;
+  --special-grey-dark: #F9F5F0;
+  --special-grey-opacity: #A9A9A9;
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --error: #BA2732;
+  --grey: inear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+}
+
+/* Global */
+
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-white);
+  background-color: var(--basic-background-color);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.page a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main menu */
+
+.main-menu {
+  background-color: var(--basic-ferrara-blue);
+}
+
+.main-header-logo {
+  background-color: var(--basic-red);
+  width: 220px;
+  height: 47px;
+}
+
+.main-header-logo:active {
+  background-color: var(--error);
+}
+
+/* Main navigation */
+
+.main-menu-items,
+.site-navigation {
+  list-style: none;
+  color: var(--basic-white);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.site-navigation li:hover {
+  background: var(--basic-greylight-dark);
+}
+
+.site-navigation li:active {
+  background: var(--basic-greylight-dark);
+  color: var(--basic-white);
+  opacity: 0.5;
+}
+
+.main-header a {
+  color: var(--basic-white);
+}
+
+.main-menu-items svg {
+  fill: var(--basic-grey-white);
+}
+
+.main-menu-items svg:hover {
+  fill: var(--basic-white);
+}
+
+.main-menu-items svg:active {
+  fill: var(--basic-grey-white);
+}
+
+.main-menu-items li:nth-child(2):active,
+.main-menu-items li:nth-child(3):active,
+.main-menu-items span:nth-child(2):active {
+  background-color: var(--basic-black-grey);
+  color: var(--basic-grey-white);
+}
+
+.main-menu-items input:nth-child(1):focus {
+  background-color: white;
+  background-color: white;
+  color: white;
+  border-color: white;
+}
+
+.main-menu-items input {
+  background-color: var(--basic-ferrara-blue);
+  color: var(--basic-ferrara-blue);
+  border-color: var(--basic-ferrara-blue);
+}
+
+.menu-button {
+  background-color: var(--basic-green);
+}
+
+.menu-button:hover {
+  background-color: var(--basic-green-bright);
+}
+
+.menu-button:active {
+  background-color: var(--basic-green);
+}
+
+/* Main-info */
+
+.main-info i {
+  color: var(--basic-red);
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.main-contacts span {
+  border: 3px solid var(--basic-white);
+}
+
+.main-contacts a {
+  color: var(--basic-red);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.main-info span {
+  color: var(--basic-greylight-light);
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.main-login a {
+  text-align: center;
+  background-color: var(--basic-grey-white);
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black-dark);
+}
+
+/* Main-navigation */
+
+.site-navigation {
+  background-color: var(--basic-ferrara-blue);
+}
+
+/* Main-container */
+
+.features-list {
+  list-style: none;
+}
+
+.features-list h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.feature-item p:hover {
+  background-color: var(--basic-grey-opacity);
+}
+
+.feature-item p:active {
+  background-color: var(--basic-dark-opacity);
+}
+
+.features-list p {
+  background: var(--basic-white-opacity);
+  color: var(--basic-white);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.features-list li:nth-child(1) {
+  background-color: var(--warning);
+}
+
+.features-list li:nth-child(2) {
+  background-color: var(--basic-blue);
+}
+
+.features-list li:nth-child(3) {
+  background-color: var(--basic-turquoise);
+}
+
+.features-list li:nth-child(4) {
+  background-color: var(--basic-khaki);
+}
+
+.features-list li:nth-child(5) {
+  background-color: var(--warning);
+}
+
+/* slider */
+.slider-list {
+  list-style: none;
+}
+
+.slider-list h3 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.button {
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+/* products */
+
+.heder-items {
+  background-color: var(--special-grey-dark);
+  color: var(--basic-greylight-light);
+  text-transform: uppercase;
+}
+
+.products-item,
+.firms-item {
+  list-style: none;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.products-item h3 {
+  color: var(--basic-black-dark);
+  line-height: 20px;
+}
+
+.products-item span {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.products-item p {
+  color: var(--special-grey-opacity);
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration: line-through;
+}
+
+/* services */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.services h2 {
+  color: var(--basic-black-dark);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services p {
+  color: var(--basic-black-dark);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+/* company-info */
+.company-info {
+  color: var(--basic-black-dark);
+}
+
+.company-info div h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.company-info p {
+
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.company-partners-item {
+  list-style: none;
+}
+
+/* footer */
+
+.footer-info {
+  background-color: var(--basic-greylight-light);
+}
+
+.page-footer li {
+  list-style: none;
+}
+
+.page-footer li a {
+  color: var(--basic-white);
+}
+
+
+.footer-navigation ul:nth-child(2) a {
+  color: var(--basic-gold-dark);
+}
+
+.footer-navigation li:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation li:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.social-button {
+  background: var(--basic-dark-gradient);
+}
+
+.social-button:hover,
+.social-button:active {
+  background: var(--basic-red);
+}
+
+/* footer-bottom */
+.footer-bottom {
+  background-color: var(--basic-ferrara-blue);
+}
+
+.footer-bottom a {
+  color: var(--basic-gold-dark);
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright a:active {
+  text-decoration: none;
+  color: var(--basic-red);
+}
