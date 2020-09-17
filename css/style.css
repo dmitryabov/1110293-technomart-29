@@ -103,6 +103,10 @@ img {
   color: var(--basic-white);
 }
 
+.main-menu-items {
+  text-decoration: none;
+}
+
 .main-menu-items svg {
   fill: var(--basic-grey-white);
 }
@@ -376,4 +380,32 @@ img {
 .footer-copyright a:active {
   text-decoration: none;
   color: var(--basic-red);
+}
+
+/* catalog */
+
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  text-decoration: none;
+  color: var(--basic-black-dark);;
+  background-color: var(--basic-white);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
 }
