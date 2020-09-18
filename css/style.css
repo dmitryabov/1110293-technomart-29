@@ -14,11 +14,13 @@
   --basic-green-bright: #5FBB2D;
   --basic-black-grey: #161D29;
   --basic-black-dark: #000000;
+  --basic-white-matt: #EAEAEA;
   --basic-red: #EE3643;
   --basic-blue: #3BBCE3;
   --basic-turquoise: #DC91D8;
   --basic-khaki: #8ED78F;
   --basic-gold: #FFC047;
+  --basic-red-dark: #CA2C37;
   --basic-gold-dark: #FFDA96;
   --basic-background: #F1F5F7;
   --basic-grey: #3D546F;
@@ -52,6 +54,11 @@ body {
   background-color: var(--basic-background-color);
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+
+#lll {
+  background-color: #8fbd35;
 }
 
 .page a {
@@ -99,6 +106,8 @@ img {
   opacity: 0.5;
 }
 
+
+
 .main-header a {
   color: var(--basic-white);
 }
@@ -107,16 +116,16 @@ img {
   text-decoration: none;
 }
 
+.main-menu-items li:hover svg {
+  fill: var(--basic-white);
+}
+
 .main-menu-items svg {
   fill: var(--basic-grey-white);
 }
 
-.main-menu-items svg:hover {
-  fill: var(--basic-white);
-}
-
-.main-menu-items svg:active {
-  fill: var(--basic-grey-white);
+.main-menu-items li:active svg {
+  fill: red;
 }
 
 .main-menu-items li:nth-child(2):active,
@@ -128,9 +137,12 @@ img {
 
 .main-menu-items input:nth-child(1):focus {
   background-color: white;
-  background-color: white;
   color: white;
   border-color: white;
+}
+
+.main-menu-items li:focus svg {
+  fill: red;
 }
 
 .main-menu-items input {
@@ -178,10 +190,22 @@ img {
 
 .main-login a {
   text-align: center;
-  background-color: var(--basic-grey-white);
+  background-color: var(--basic-white-grey);
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black-dark);
+}
+
+.main-login svg {
+  fill: var(--basic-greylight);
+} 
+
+.main-login a:hover {
+  color: var(--basic-red);
+}
+
+.main-login a:hover svg{
+  fill: var(--basic-grey);
 }
 
 /* Main-navigation */
@@ -194,6 +218,10 @@ img {
 
 .features-list {
   list-style: none;
+}
+
+.feature-item {
+  width: 300px;
 }
 
 .features-list h3 {
@@ -242,6 +270,13 @@ img {
   list-style: none;
 }
 
+.slider-item .button:hover {
+  background-color: var(--basic-red-dark);
+}
+.slider-item .button:active {
+  background-color: var(--error);
+}
+
 .slider-list h3 {
   font-size: 36px;
   line-height: 36px;
@@ -261,10 +296,18 @@ img {
   text-transform: uppercase;
 }
 
+.heder-items p{
+  width: 192px;
+}
+
 .products-item,
 .firms-item {
   list-style: none;
   font-family: "PT Sans", Arial, sans-serif;
+}
+
+.firms-item img {
+  border: 1px solid var(--basic-white-matt);
 }
 
 .products-item h3 {
@@ -292,7 +335,19 @@ img {
   background-color: var(--basic-background);
 }
 
-.services h2 {
+.services-form label {
+  background-color: var(--basic-greylight-light);
+}
+
+.services-form label:hover {
+  background-color: var(--basic-ferrara-blue);
+}
+.services-form input:checked + label{
+  background-color: var(--basic-white);
+  color: var(--basic-greylight-light);
+}
+
+.services h3 {
   color: var(--basic-black-dark);
   font-size: 30px;
   line-height: 30px;
@@ -357,6 +412,7 @@ img {
 
 .social-button {
   background: var(--basic-dark-gradient);
+  width: 40px;
 }
 
 .social-button:hover,
