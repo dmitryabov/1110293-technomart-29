@@ -16,7 +16,7 @@
   <header class="main-header">
     <section class="main-menu">
       <a>
-        <h2 class="main-header-logo">ТЕХНОМАРТ</h2>
+        <img src="img/logo-technomart.png" width="108" height="18">
       </a>
       <ul class="main-menu-items">
         <li>
@@ -25,7 +25,7 @@
               <use xlink:href="#search"></use>
             </svg>
           </a>
-          <span>Поиск: <input type="search"></span>
+          <span ><input type="search" placeholder="Поиск"></span>
         </li>
         <li>
           <a href="#">
@@ -57,10 +57,12 @@
       </p>
       <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
       <p class="main-login">
-        <a href="#"><svg height="17" width="20">
+        <a href="#">
+          <svg height="17" width="20">
             <use xlink:href="#login"></use>
           </svg> Войти</a>
-        <a href="#">Регистрация</a>
+        <a href="#">
+          Регистрация</a>
       </p>
     </section>
 
@@ -123,7 +125,7 @@
       <ul class="slider-list">
         <li class="slider-item">
           <h3>ПЕРФОРАТОРЫ</h3>
-          <p class="button">Настоящие мужские игрушки</p>
+          <p >Настоящие мужские игрушки</p>
           <a href="#">
             <img src="img/perforators.png" width="620" height="266" alt="Перфораторы">
           </a>
@@ -204,16 +206,16 @@
         <input type="radio" name="service" id="delivery-field" checked>
         <label for="delivery-field">Доставка</label>
 
-        <input type="radio" name="service" id="guarantee-field" checked>
+        <input type="radio" name="service" id="guarantee-field" >
         <label for="guarantee-field">Гарантия</label>
 
-        <input type="radio" name="service" id="credit-field" checked>
+        <input type="radio" name="service" id="credit-field" >
         <label for="credit-field">Кредит</label>
 
       </form>
 
       <div class="service-block service-block-delivery">
-        <h3>доставка</h3>
+        <h3>ДОСТАВКА</h3>
         <p>Мы с удовольствием доставим ваш товар прямо <br>
           к вашему подъезду совершенно бесплатно!<br>
           Ведь мы неплохо заработаем, <br>
@@ -221,7 +223,7 @@
         <img src="img/bigtruck.png" width="468" height="261" alt="грузовик">
       </div>
       <div class="service-block service-block-guarantee">
-        <h3>гарантия</h3>
+        <h3>ГАРАНТИЯ</h3>
         <p>Если купленный у нас товар поломается или заискрит, <br>
           а также в случае пожара, спровоцированного его <br>
           возгоранием, вы всегда можете быть уверены в нашей <br>
@@ -230,13 +232,12 @@
         <img src="img/medal.png" width="389" height="283" alt="медаль">
       </div>
       <div class="service-block service-block-credit">
-        <h3>кредит</h3>
+        <h3>КРЕДИТ</h3>
         <p>Залезть в долговую яму стало проще! <br>
           Кредитные консультанты придут вам на помощь.</p>
         <img src="img/credit.png" width="465" height="285" alt="кредит">
         <a href="#">отправить заявку</a>
       </div>
-
     </section>
 
     <section class="company-info">
@@ -271,7 +272,7 @@
 
   <footer class="page-footer main-footer">
     <section class="footer-info">
-      <img src="img/logo.png" width="220" height="68" alt="логотип">
+      <img src="img/footer-logo.png" width="220" height="68" alt="логотип">
       <section class="footer-contacts">
         <p>
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
@@ -323,6 +324,31 @@
     </section>
 
   </footer>
+  <section class="modal">
+    <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label class="visually-hidden" for="nema-form">Ваше имя:</label>
+        <input class="name-user" id="name-form" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label class="visually-hidden" for="email-form">Ваш e-mail:</label>
+        <input class="email-user" id="email-form" type="email" name="login" placeholder="email@example.com">
+      </p>
+      <p>
+        <lebel for="textarea">Текст письма:</lebel><br>
+        <textarea id="textarea" rows="3" >В свободной форме </textarea><br>
+      </p>
+      
+      <button class="button" type="submit">ОТПРАВИТЬ</button>
+    </form>
+    <button type="button">Закрыть</button>
+  </section>
+
+  <section class="modal">
+    <!-- Здесь будет карта -->
+    <button type="button">Закрыть</button>
+  </section>
+
   <svg width="0" height="0" class="hidden">
     <symbol viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" id="bookmark">
       <path
@@ -353,10 +379,10 @@
         fill="#FFFFFF"></path>
     </symbol>
     <symbol viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg" id="login">
-      <path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z" fill="#C5C5C5"></path>
+      <path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z"></path>
       <path
-        d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038 1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z"
-        fill="#C5C5C5"></path>
+        d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038 1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z">
+      </path>
     </symbol>
     <symbol viewBox="0 0 44 65" fill="none" xmlns="http://www.w3.org/2000/svg" id="materials">
       <path
