@@ -87,21 +87,19 @@ img {
   margin-bottom: 59px;
 }
 
-.main-menu {
-  background-color: var(--basic-ferrara-blue);
-}
-
-
 .main-container-wrapper {
   background-color: var(--basic-ferrara-blue);
 }
 
-.main-menu,
-.main-info,
-.main-navigation {
-  display: grid;
+.main-container {
   width: 940px;
   margin: 0 auto;
+}
+
+
+.main-menu {
+  display: grid;
+  background-color: var(--basic-ferrara-blue);
 }
 
 .main-info-wrapper {
@@ -109,6 +107,7 @@ img {
 }
 
 .main-navigation {
+  display: grid;
   background-color: var(--basic-ferrara-blue);
 }
 
@@ -145,6 +144,7 @@ img {
 }
 
 .main-info {
+  display: grid;
   background-color: var(--basic-white-grey);
 }
 
@@ -283,8 +283,8 @@ img {
 
 .features-list {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 123px 123px 123px;
+  grid-template-columns: repeat(3,300px);
+  min-height: 123px;
   grid-gap: 20px;
 }
 
@@ -378,13 +378,13 @@ img {
 }
 
 
-.heder-items {
+.header-items {
   display: grid;
   grid-template-columns: 1fr min-content;
-  grid-template-rows: 89px;
+  min-height: 89px;
 }
 
-.heder-items {
+.header-items {
   background-color: var(--special-grey-dark);
   color: var(--basic-greylight-light);
   text-transform: uppercase;
@@ -395,7 +395,7 @@ img {
   background-color: var(--basic-white);
 }
 
-.heder-items p{
+.header-items p{
   width: 192px;
 }
 
@@ -442,12 +442,8 @@ img {
 
 /* services */
 
-
-
 .services {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+
   background-color: var(--basic-background);
 }
 
@@ -496,9 +492,7 @@ img {
   background-color: var(--basic-white);;
 }
 
-.company-info div {
-  margin: 0 auto;
-}
+
 
 .company-info div h2 {
   font-size: 30px;
