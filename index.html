@@ -22,16 +22,16 @@
           </a>
           <ul class="main-menu-items">
             <li class="item-search">
+              <span><input type="search" placeholder="Поиск"></span>
               <a href="#">
                 <svg height="17" width="17">
                   <use xlink:href="#search"></use>
                 </svg>
               </a>
-              <span><input type="search" placeholder="Поиск"></span>
             </li>
             <li class="item-bookmark">
               <a href="#">
-                <svg height="14" width="15">
+                <svg height="15" width="15">
                   <use xlink:href="#bookmark"></use>
                 </svg>
                 <span> Закладки: 0</span>
@@ -40,7 +40,7 @@
             </li>
             <li class="item-cart">
               <a href="#">
-                <svg height="17" width="17">
+                <svg height="15" width="15">
                   <use xlink:href="#cart"></use>
                 </svg>
                 <span>Корзина: 0</span>
@@ -93,11 +93,11 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container-main">
     <div class="container-wrapper center">
     <section class="features">
       <ul class="features-list">
-        <li class="feature-item feature-item-materials">
+        <li class="feature-item feature-item-materials feature-item-new">
           <div class="feature-item-block">
             <h3>Материалы</h3>
             <a class="feature-item-button">на любой вкус</a>
@@ -166,7 +166,7 @@
       <div class="products-items-wrapper">
         <ul class="products-items">
           <li class="products-item">
-            <a href="#" class="product-inner">
+            <a href="#" class="product-inner ">
               <img src="img/bfg9000.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
               <div>
                 <h3>Перфоратор BOSCH BFG 9000</h3>
@@ -175,7 +175,7 @@
               </div>
             </a>
           </li>
-          <li class="products-item">
+          <li class="products-item new-card">
             <a href="#" class="product-inner">
               <img src="img/bfg3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
               <div>
@@ -185,7 +185,7 @@
               </div>
             </a>
           </li>
-          <li class="products-item">
+          <li class="products-item ">
             <a href="#" class="product-inner">
               <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
               <div>
@@ -195,7 +195,7 @@
               </div>
             </a>
           </li>
-          <li class="products-item is-not-sale">
+          <li class="products-item is-not-sale new-card">
             <a href="#" class="product-inner">
               <img src="img/bfg2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
               <div>
@@ -238,7 +238,7 @@
       <div>
         <form class="services-form">
           <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="delivery-field" checked>
-          <label for="delivery-field ">Доставка</label>
+          <label for="delivery-field">Доставка</label>
           <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="guarantee-field">
           <label for="guarantee-field">Гарантия</label>
           <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="credit-field">
