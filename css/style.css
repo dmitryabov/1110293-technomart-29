@@ -641,7 +641,7 @@ body {
   margin: 0;
   margin-bottom: 18px;
   list-style: none;
-  width: 720px;
+  min-width: 720px;
 }
 
 .header-items {
