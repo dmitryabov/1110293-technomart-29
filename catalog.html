@@ -49,17 +49,17 @@
       </div>
       <div class="main-info-wrapper">
         <section class="main-info center">
-          <i class="main-info-description">Интернет-магазин строительных материалов <br> и  инструментов для ремонта</i>
+          <i class="main-info-description">Интернет-магазин строительных материалов <br> и инструментов для ремонта</i>
           <div class="main-info-container">
             <p class="main-contacts">
               <span>
                 <a href="tel:+78125550555">
                   <svg height="20" width="20">
                     <use xlink:href="#phone"></use>
-                  </svg> +7&nbsp;(812)&nbsp;555-05-55 
+                  </svg> +7&nbsp;(812)&nbsp;555-05-55
                 </a>
               </span>
-                  
+
             </p>
             <span class="main-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </div>
@@ -107,17 +107,94 @@
       </div>
       <div class="catalog-container">
         <span class="filter-title">ФИЛЬТР:</span>
-        <div class="filter">filter</div>
+        <div class="filter">
+          <h2 class="visually-hidden">Фильтр товаров</h2>
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter-item">
+              <legend>ЦЕНА:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="
+                width: 70%;
+                margin-left: 10%
+              "></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="
+              left: 8%
+            "></div>
+                  <div class="toggle toggle-max" tabindex="0" style="
+              left: 73%
+            "></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    <input type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="product-filter-checkbox">
+              <legend class="product-filter">Производители:</legend>
+              <ul>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="product-group"
+                    value="shaving" id="filter-shave">
+                  <label for="filter-shave">BOSCH</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="product-group"
+                    value="hair-care" id="filter-care" checked>
+                  <label for="filter-care">ИНТЕРСКОЛ</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="product-group"
+                    value="accessories" id="filter-accessories">
+                  <label for="filter-accessories">MAKITA</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="product-group"
+                    value="accessories" id="filter-dewalt">
+                  <label for="filter-dewalt">DEWALT</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="product-group"
+                    value="accessories" id="filter-hitachi">
+                  <label for="filter-hitachi">HITACHI</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="product-filter-radio">
+              <legend class="product-filter">Питание:</legend>
+              <ul>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group"
+                    value="shaving" id="filter-akum">
+                  <label for="filter-akum">АККУМУЛЯТОРНЫЕ</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group"
+                    value="hair-care" id="filter-cite" checked>
+                  <label for="filter-cite">СЕТЕВЫЕ</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="filter-button button">Показать</button>
+          </form>
+        </div>
         <section class="catalog-sort-items">
           <span>сортировка:</span>
           <form class="catalog-sort-form">
             <input class="visually-hidden" type="radio" name="sort" id="price-field" checked>
             <label class="catalog-sort-form-label" for="price-field">по цене</label>
 
-            <input class="visually-hidden" type="radio" name="sort" id="type-field" >
+            <input class="visually-hidden" type="radio" name="sort" id="type-field">
             <label class="catalog-sort-form-label" for="type-field">по типу</label>
 
-            <input class="visually-hidden" type="radio" name="sort" id="function-field" >
+            <input class="visually-hidden" type="radio" name="sort" id="function-field">
             <label class="catalog-sort-form-label" for="function-field">по функционалу</label>
           </form>
           <button class="catalog-button button-up" type="button" disabled><span>вверх</span></button>
@@ -231,18 +308,19 @@
           <li class="pagination-item">
             <a href="#">3</a>
           </li>
-          <li class="pagination-item">
+          <li class="pagination-item next-button">
             <a href="#">следующая</a>
           </li>
         </ul>
       </section>
-
-      <section>
+    </div>
+    <div class="perforator-description">
+      <section class="center">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
-          кирпиче, бетоне и камне.
+          кирпиче, бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-          шуруповерта и отбойного молотка.
+          шуруповерта и отбойного молотка. <br>
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
           ударная дрель.</p>
       </section>
@@ -252,70 +330,70 @@
   <footer class="page-footer main-footer">
     <div class="page-footer-wrapper">
       <div class="page-info-wrapper">
-      <section class="footer-info center">
-        <section class="footer-contacts">
-          <a class="main-menu-logo">
-            <img src="img/big-logo.svg" width="138" height="23" alt="ТЕХНОМАРТ">
-          </a>
-          <p>
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-            +7 (812) 555-05-55
-          </p>
+        <section class="footer-info center">
+          <section class="footer-contacts">
+            <a class="main-menu-logo">
+              <img src="img/big-logo.svg" width="138" height="23" alt="ТЕХНОМАРТ">
+            </a>
+            <p>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+              +7 (812) 555-05-55
+            </p>
+          </section>
+          <section class="footer-navigation">
+            <ul class="navigation-wrapper">
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="products-wrapper">
+              <li><a href="#">Материалы</a></li>
+              <li><a href="#">Техника</a></li>
+              <li><a href="#">Инструмент</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+            </ul>
+          </section>
         </section>
-        <section class="footer-navigation">
-          <ul class="navigation-wrapper">
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <ul class="products-wrapper">
-            <li><a href="#">Материалы</a></li>
-            <li><a href="#">Техника</a></li>
-            <li><a href="#">Инструмент</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-          </ul>
-        </section>
-      </section>
-    </div>
+      </div>
       <section class="footer-bottom">
         <div class="footer-bottom-wrapper center">
-        <span class="footer-bottom-title">
-          © 2010–2019 Компания «Техномарт» <br>Все права защищены
-        </span>
+          <span class="footer-bottom-title">
+            © 2010–2019 Компания «Техномарт» <br>Все права защищены
+          </span>
 
-        <section class="footer-social">
-          <ul>
-            <li>
-              <a class="social-button" href="#">
-                 <svg height="14" width="25" class="icon">
-                <use xlink:href="#Shape"></use>
-              </svg></a>
-            </li>
-            <li >
-              <a class="social-button" href="#"> <svg height="22" width="12" class="icon">
-                <use xlink:href="#Shape (1)"></use>
-              </svg></a>
-            </li>
-            <li>
-              <a class="social-button" href="#"> <svg height="21" width="21" class="icon">
-                <use xlink:href="#icon-insta"></use>
-              </svg></a>
-            </li>
-          </ul>
-        </section>
-        <div class="footer-copyright-info">
-          <p class="footer-copyright">
-            Обратная связь: <br>
-            <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <p class="footer-copyright">
-            Разработано - <br>
-            <a href="https://htmlacademy.ru">htmlacademy.ru</a>
-          </p>
+          <section class="footer-social">
+            <ul>
+              <li>
+                <a class="social-button" href="#">
+                  <svg height="14" width="25" class="icon">
+                    <use xlink:href="#Shape"></use>
+                  </svg></a>
+              </li>
+              <li>
+                <a class="social-button" href="#"> <svg height="22" width="12" class="icon">
+                    <use xlink:href="#Shape (1)"></use>
+                  </svg></a>
+              </li>
+              <li>
+                <a class="social-button" href="#"> <svg height="21" width="21" class="icon">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </section>
+          <div class="footer-copyright-info">
+            <p class="footer-copyright">
+              Обратная связь: <br>
+              <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+            <p class="footer-copyright">
+              Разработано - <br>
+              <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+            </p>
+          </div>
         </div>
-      </div>
       </section>
     </div>
   </footer>
@@ -390,13 +468,17 @@
         fill="#FFFFFF"></path>
     </symbol>
     <symbol viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-insta">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15c1.65 0 3 1.35 3 3v15c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7 10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5zM3 18V9h1.181A6.48 6.48 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.451 6.451 0 0 0-.181-1.5H18v9H3zM14 7h4V3h-4v4z" fill="#fff"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M3 0h15c1.65 0 3 1.35 3 3v15c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7 10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5zM3 18V9h1.181A6.48 6.48 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.451 6.451 0 0 0-.181-1.5H18v9H3zM14 7h4V3h-4v4z"
+        fill="#fff"></path>
     </symbol>
     <symbol viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg" id="Shape (1)">
       <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"></path>
     </symbol>
     <symbol viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="Shape">
-      <path d="M15.54 11.728c.92-.29 2.1 1.913 3.354 2.755.942.639 1.663.501 1.663.501l3.345-.047s1.747-.105.921-1.457c-.068-.112-.484-1.002-2.489-2.833-2.096-1.915-1.812-1.605.712-4.916 1.538-2.019 2.153-3.251 1.96-3.776-.185-.506-1.314-.374-1.314-.374l-3.768.025c-.367 0-.678.111-.82.483-.003.003-.598 1.562-1.391 2.886-1.677 2.802-2.346 2.952-2.623 2.776-.637-.406-.476-1.628-.476-2.497 0-2.716.416-3.849-.815-4.141-.411-.098-.711-.161-1.76-.17-1.34-.02-2.479 0-3.124.308-.428.209-.757.667-.557.693.25.033.811.15 1.112.55.386.517.374 1.677.374 1.677s.22 3.198-.52 3.594c-.508.272-1.203-.283-2.699-2.827-.763-1.301-1.34-2.74-1.34-2.74s-.112-.267-.314-.413a1.583 1.583 0 0 0-.578-.229L.817 1.58s-.538.015-.735.245c-.175.205-.015.627-.015.627s2.802 6.45 5.974 9.7c2.908 2.983 6.213 2.785 6.213 2.785h1.497s.452-.05.683-.292c.216-.225.206-.648.206-.648s-.03-1.977.9-2.268z" fill="#fff"></path>
+      <path
+        d="M15.54 11.728c.92-.29 2.1 1.913 3.354 2.755.942.639 1.663.501 1.663.501l3.345-.047s1.747-.105.921-1.457c-.068-.112-.484-1.002-2.489-2.833-2.096-1.915-1.812-1.605.712-4.916 1.538-2.019 2.153-3.251 1.96-3.776-.185-.506-1.314-.374-1.314-.374l-3.768.025c-.367 0-.678.111-.82.483-.003.003-.598 1.562-1.391 2.886-1.677 2.802-2.346 2.952-2.623 2.776-.637-.406-.476-1.628-.476-2.497 0-2.716.416-3.849-.815-4.141-.411-.098-.711-.161-1.76-.17-1.34-.02-2.479 0-3.124.308-.428.209-.757.667-.557.693.25.033.811.15 1.112.55.386.517.374 1.677.374 1.677s.22 3.198-.52 3.594c-.508.272-1.203-.283-2.699-2.827-.763-1.301-1.34-2.74-1.34-2.74s-.112-.267-.314-.413a1.583 1.583 0 0 0-.578-.229L.817 1.58s-.538.015-.735.245c-.175.205-.015.627-.015.627s2.802 6.45 5.974 9.7c2.908 2.983 6.213 2.785 6.213 2.785h1.497s.452-.05.683-.292c.216-.225.206-.648.206-.648s-.03-1.977.9-2.268z"
+        fill="#fff"></path>
     </symbol>
   </svg>
 
