@@ -347,8 +347,8 @@
           <p>Вы можете забрать товар сами, <br>
             заехав в наш офис:</p>
           <div class="company-contacts-wrapper">
-            <img src="img/map.png" width="300" height="158" alt="карта">
-            <button class="button" type="button">Заблудились? Напишите НАМ!</button>
+            <img class="contacts-button-map" src="img/map.png" width="300" height="158" alt="карта">
+            <button class="button contacts-button" type="button">Заблудились? Напишите НАМ!</button>
           </div>
         </div>
       </section>
@@ -425,29 +425,37 @@
       </section>
     </div>
   </footer>
-  <section class="modal">
+  <section class="modal modal-login">
     <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label class="visually-hidden" for="nema-form">Ваше имя:</label>
+      <div class="modal-wrap">
+      <div class="modal-name-wrap">
+      <span>
+        <p class="modal-description">Ваше имя:</p>
+        <label class="visually-hidden" for="name-form">Ваше имя:</label>
         <input class="name-user" id="name-form" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p>
+      </span>
+      <span>
+        <p class="modal-description">Ваш e-mail:</p>
         <label class="visually-hidden" for="email-form">Ваш e-mail:</label>
         <input class="email-user" id="email-form" type="email" name="login" placeholder="email@example.com">
-      </p>
+      </span>
+    </div>
       <p>
         <lebel for="textarea">Текст письма:</lebel><br>
         <textarea id="textarea" rows="3">В свободной форме </textarea><br>
       </p>
-
-      <button class="button" type="submit">ОТПРАВИТЬ</button>
+    </div>
+      <div class="button-wrapper">
+        <button class="button" type="submit">ОТПРАВИТЬ</button>
+      </div>
     </form>
-    <button type="button">Закрыть</button>
+     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal">
-    <!-- Здесь будет карта -->
-    <button type="button">Закрыть</button>
+  <section class="modal modal-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" 
+    width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
   <svg width="0" height="0" class="hidden">
@@ -533,7 +541,8 @@
         fill="#fff"></path>
     </symbol>
   </svg>
-
+  <script src="js/map.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>
