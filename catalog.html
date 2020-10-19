@@ -19,7 +19,7 @@
           </a>
           <ul class="main-menu-items">
             <li class="main-menu-item  item-search">
-              <span><input type="search" placeholder="Поиск"></span>
+              <span><input type="search" class="search-field" placeholder="Поиск"></span>
               <a href="#">
                 <svg height="17" width="17">
                   <use xlink:href="#search"></use>
@@ -204,7 +204,7 @@
           <div class="products-items-wrapper">
             <ul class="products-items">
               <li class="products-item">
-                <a href="#" class="product-inner">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                     <div class="btns-wrap">
@@ -222,10 +222,10 @@
                     <p>30500 Р.</p>
                     <span>25500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
               <li class="products-item">
-                <a href="#" class="product-inner">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                     <div class="btns-wrap">
@@ -243,10 +243,10 @@
                     <p>30500 Р.</p>
                     <span>25500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
-              <li class="products-item new-card" data-parent="NEW">
-                <a href="#" class="product-inner">
+              <li class="products-item new-card" data-status="NEW">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                     <div class="btns-wrap">
@@ -264,10 +264,10 @@
                     <p>30500 Р.</p>
                     <span>25500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
-              <li class="products-item new-card catalog-item new-card" data-parent="NEW">
-                <a href="#" class="product-inner">
+              <li class="products-item new-card catalog-item new-card" data-status="NEW">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                     <div class="btns-wrap">
@@ -285,10 +285,10 @@
                     <p class="is-sale">22500 Р.</p>
                     <span>15500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
               <li class="products-item">
-                <a href="#" class="product-inner">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                     <div class="btns-wrap">
@@ -306,10 +306,10 @@
                     <p>30500 Р.</p>
                     <span>25500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
-              <li class="products-item is-not-sale new-card" data-parent="NEW">
-                <a href="#" class="product-inner">
+              <li class="products-item is-not-sale new-card" data-status="NEW">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                     <div class="btns-wrap">
@@ -327,10 +327,10 @@
                     <p>0</p>
                     <span>12500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
-              <li class="products-item new-card catalog-item" data-parent="NEW">
-                <a href="#" class="product-inner">
+              <li class="products-item new-card catalog-item" data-status="NEW">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                     <div class="btns-wrap">
@@ -348,10 +348,10 @@
                     <p class="is-sale">22500 Р.</p>
                     <span>15500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
               <li class="products-item">
-                <a href="#" class="product-inner">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                     <div class="btns-wrap">
@@ -369,10 +369,10 @@
                     <p>30500 Р.</p>
                     <span>25500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
-              <li class="products-item is-not-sale new-card" data-parent="NEW">
-                <a href="#" class="product-inner">
+              <li class="products-item is-not-sale new-card" data-status="NEW">
+                <div href="#" class="product-inner">
                   <div class="img-wrap">
                     <img src="img/bfg2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                     <div class="btns-wrap">
@@ -390,7 +390,7 @@
                     <p>0</p>
                     <span>12500 Р.</span>
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -497,6 +497,24 @@
     </div>
   </footer>
 
+  <section class="modal modal-order">
+    <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="modal-order-wrap">
+      <div class="modal-wrap modal-wrap-order">
+        <div class="modal-name-wrap modal-order-content">
+          <img src="img/icon-mark.png" width="66" height="66">
+          <p>Товар добавлен в корзину!</p>
+        </div>
+      </div>
+      <div class="button-wrapper button-wrapper-order">
+        <button class="button" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+        <button class="button" type="submit">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      </div>
+    </div>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+
   <svg width="0" height="0" class="hidden">
     <symbol viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" id="bookmark">
       <path
@@ -580,7 +598,7 @@
         fill="#fff"></path>
     </symbol>
   </svg>
-
+  <script src="js/catalog.js"></script>
 </body>
 
 </html>

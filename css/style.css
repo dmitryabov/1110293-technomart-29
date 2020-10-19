@@ -156,9 +156,9 @@ body {
 }
 
 .new-card::before {
-  content: attr(data-parent);
+  content: attr(data-status);
   position: absolute;
-  font-family: "Cuprum", "Tahoma", sans-serif;
+  font-family: "Cuprum";
   color: var(--basic-white);
   display: flex;
   justify-content: center;
@@ -343,13 +343,13 @@ body {
   min-height: 42px;
 }
 
-.item-search input[type="search"] {
-  color: black;
+.item-search input[type="search"] { 
+  color: var(--basic-black-dark);
   border: none;
 }
 
-.item-search input[type="search"]::placeholder {
-  color: white;
+.search-field::placeholder {
+  color: var(--basic-white);
 }
 
 .menu-button:hover {
@@ -1826,6 +1826,7 @@ fieldset legend {
   margin: auto;
   border-top: 7px solid var(--basic-red);
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 
 
@@ -1839,6 +1840,8 @@ fieldset legend {
   border: 2px solid #C5C5C5;
   box-sizing: border-box;
   border-radius: 2px;
+  color: var(--special-grey-opacity);
+  padding-left: 10px;
 }
 
 #textarea {
@@ -1851,21 +1854,22 @@ fieldset legend {
 
 .modal-close {
   position: absolute;
-  top: 0;
-  right: -34px;
+  top: 10px;
+  right: 10px;
   width: 22px;
   height: 22px;
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  
 }
 
 .modal-close::before,
 .modal-close::after {
   content: "";
   position: absolute;
-  top: 20px;
-  left: -50px;
+  top: 10px;
+  left: -0px;
   width: 21px;
   height: 4px;
   background-color: var(--basic-red);
@@ -1944,4 +1948,66 @@ fieldset legend {
   80% {
     transform: translateX(10px);
   }
+}
+
+/* modal-order */
+
+.modal-order {
+  width: 620px;
+  height: 282px;
+  background-color: var(--basic-white);
+}
+
+.button-wrapper-order {
+  height: 112px;
+}
+
+.button-wrapper-order .button{
+  width: 192px;
+  height: 38px;
+}
+
+.button-wrapper-order .button:nth-child(2) {
+  margin-left: 10px;
+  background-color: var(--basic-white);
+  color: var(--basic-black-dark);
+}
+
+
+.modal-order-wrap {
+  display: flex;
+  width: 620px;
+  height: 282px;
+  flex-direction: column;
+  justify-content: end;
+}
+
+
+.modal-wrap-order {
+  height: 170px;
+}
+
+.modal-order-content {
+  justify-content: start;
+}
+
+.modal-order-content img {
+  margin-right: 20px;
+}
+
+.modal-order-content p {
+  font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.modal-order{
+  display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
 }
