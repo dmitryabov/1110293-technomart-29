@@ -17,24 +17,27 @@
     <div class="main-container">
       <div class="main-container-wrapper">
         <section class="main-menu center">
-          <a class="main-menu-logo">
+          <a class="main-menu-logo" tabindex="0">
             <img src="img/logo-t.svg" width="108" height="18" alt="ТЕХНОМАРТ">
           </a>
           <ul class="main-menu-items">
             <li class="main-menu-item  item-search">
-              <span><input class="search-field" type="search" placeholder="Поиск"></span>
-              <a href="#">
-                <svg height="17" width="17">
-                  <use xlink:href="#search"></use>
-                </svg>
-              </a>
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="search-inpun">поле поиска</label>
+                <input class="search-field" id="search-inpun" type="search" name="search" placeholder="Поиск">
+                <button href="#" type="submit" type="submit" class="btn-search">
+                  <svg height="17" width="17">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+              </form>
             </li>
             <li class="main-menu-item item-bookmark">
               <a href="#">
                 <svg height="15" width="15">
                   <use xlink:href="#bookmark"></use>
                 </svg>
-                <span> Закладки: 0</span>
+                <span>Закладки: 0</span>
               </a>
 
             </li>
@@ -82,7 +85,7 @@
           <ul class="site-navigation">
             <li><a href="#">Главная</a></li>
             <li><a href="#">Компания</a></li>
-            <li><a href="#">Каталог</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Спецпредложения</a></li>
             <li><a href="#">Доставка</a></li>
@@ -149,6 +152,10 @@
                 <h3>ПЕРФОРАТОРЫ</h3>
                 <span>Настоящие мужские игрушки</span>
               </div>
+              <div class="slider-list visually-hidden">
+                <h3>ДРЕЛИ</h3>
+                <span>Соседям на радость</span>
+              </div>
               <div class="slider-button">
                 <span class="slider-button slider-button-back"></span>
                 <span class="slider-button slider-button-next"></span>
@@ -156,6 +163,7 @@
               <a class="button" href="#">открыть каталог</a>
             </section>
           </li>
+
         </ul>
       </section>
       <section class="products">
@@ -166,7 +174,7 @@
         <div class="products-items-wrapper">
           <ul class="products-items">
             <li class="products-item">
-              <div href="#" class="product-inner">
+              <div class="product-inner">
                 <div class="img-wrap">
                   <img src="img/bfg9000.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
                   <div class="btns-wrap">
@@ -174,9 +182,11 @@
                       <svg height="15" width="15">
                         <use xlink:href="#cart"></use>
                       </svg>
-                      <button class="btns-close">Купить</button>
+                      <button class="btns-close"
+                        aria-label="Добавить Перфоратор BOSCH BFG 9000 в корзину">Купить</button>
                     </div>
-                    <button class="btns-add">В закладки</button>
+                    <button class="btns-add" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">В
+                      закладки</button>
                   </div>
                 </div>
                 <div class="price-wrap">
@@ -186,8 +196,8 @@
                 </div>
               </div>
             </li>
-            <li class="products-item new-card catalog-item new-card" data-parent="NEW">
-              <div href="#" class="product-inner">
+            <li class="products-item new-card catalog-item new-card" data-status="NEW">
+              <div class="product-inner">
                 <div class="img-wrap">
                   <img src="img/bfg3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                   <div class="btns-wrap">
@@ -195,9 +205,11 @@
                       <svg height="15" width="15">
                         <use xlink:href="#cart"></use>
                       </svg>
-                      <button class="btns-close">Купить</button>
+                      <button class="btns-close"
+                        aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</button>
                     </div>
-                    <button class="btns-add">В закладки</button>
+                    <button class="btns-add" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В
+                      закладки</button>
                   </div>
                 </div>
                 <div class="price-wrap">
@@ -208,7 +220,7 @@
               </div>
             </li>
             <li class="products-item">
-              <div href="#" class="product-inner">
+              <div class="product-inner">
                 <div class="img-wrap">
                   <img src="img/bfg6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                   <div class="btns-wrap">
@@ -216,9 +228,11 @@
                       <svg height="15" width="15">
                         <use xlink:href="#cart"></use>
                       </svg>
-                      <button class="btns-close">Купить</button>
+                      <button class="btns-close"
+                        aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                     </div>
-                    <button class="btns-add">В закладки</button>
+                    <button class="btns-add" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В
+                      закладки</button>
                   </div>
                 </div>
                 <div class="price-wrap">
@@ -228,8 +242,8 @@
                 </div>
               </div>
             </li>
-            <li class="products-item is-not-sale new-card" data-parent="NEW">
-              <div href="#" class="product-inner">
+            <li class="products-item is-not-sale new-card" data-status="NEW">
+              <div class="product-inner">
                 <div class="img-wrap">
                   <img src="img/bfg2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                   <div class="btns-wrap">
@@ -237,9 +251,11 @@
                       <svg height="15" width="15">
                         <use xlink:href="#cart"></use>
                       </svg>
-                      <button class="btns-close">Купить</button>
+                      <button class="btns-close"
+                        aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</button>
                     </div>
-                    <button class="btns-add">В закладки</button>
+                    <button class="btns-add" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В
+                      закладки</button>
                   </div>
                 </div>
                 <div class="price-wrap">
@@ -259,38 +275,45 @@
         </div>
         <div class="firms-items-wrapper">
           <ul class="firms-items">
-            <li class="firms-item"> 
-              <img src="img/bosch.png" width="220" height="145" alt="BOSCH">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/makita.png" width="220" height="145" alt="makita">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/dewalt.png" width="220" height="145" alt="dewalt">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/interkom.png" width="220" height="145" alt="interkom">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/hitachi.png" width="220" height="145" alt="hitachi">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/lg.png" width="220" height="145" alt="aeg">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/aeg.png" width="220" height="145" alt="aeg">
-              <a href="#"></a>
-            </li>
-            <li class="firms-item"> 
-              <img src="img/metabo.png" width="220" height="145" alt="metabo">
-              <a href="#"></a>
-            </li>
+            <a>
+              <li class="firms-item">
+                <img src="img/bosch.png" width="220" height="145" alt="BOSCH">
+              </li>
+            </a>
+            <a>
+              <li class="firms-item">
+                <img src="img/makita.png" width="220" height="145" alt="makita">
+              </li>
+            </a>
+            <a>
+              <li class="firms-item">
+                <img src="img/dewalt.png" width="220" height="145" alt="dewalt">
+              </li>
+              <a>
+                <li class="firms-item">
+                  <img src="img/interkom.png" width="220" height="145" alt="interkom">
+                </li>
+              </a>
+              <a>
+                <li class="firms-item">
+                  <img src="img/hitachi.png" width="220" height="145" alt="hitachi">
+                </li>
+              </a>
+              <a>
+                <li class="firms-item">
+                  <img src="img/lg.png" width="220" height="145" alt="lg">
+                </li>
+              </a>
+              <a>
+                <li class="firms-item">
+                  <img src="img/aeg.png" width="220" height="145" alt="aeg">
+                </li>
+              </a>
+              <a>
+                <li class="firms-item">
+                  <img src="img/metabo.png" width="220" height="145" alt="metabo">
+                </li>
+              </a>
           </ul>
         </div>
       </section>
@@ -305,41 +328,46 @@
         <div class="services-form-wrapper">
           <div>
             <form class="services-form">
-              <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="delivery-field"
+              <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="deliveryField"
                 checked>
-              <label for="delivery-field">Доставка</label>
-              <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="guarantee-field">
-              <label for="guarantee-field">Гарантия</label>
-              <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="credit-field">
-              <label for="credit-field">Кредит</label>
+              <label for="deliveryField">Доставка</label>
+              <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="guaranteeField">
+              <label for="guaranteeField">Гарантия</label>
+              <input class="visually-hidden services-input-checkbox" type="radio" name="service" id="creditField">
+              <label for="creditField">Кредит</label>
             </form>
+            <img class="services-form-line" src="img/line.png" alt="">
           </div>
 
-          <div class="service-block service-block-delivery">
+          <div class="service-block service-block-delivery" id='service-delivery'>
             <div>
               <h3>ДОСТАВКА</h3>
               <p>Мы с удовольствием доставим ваш товар прямо <br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем, <br>
                 поднимая его на ваш этаж!</p>
-              <img class="service-block-delivery-img" src="img/bigtruck.png" width="468" height="261" alt="трак">
+              <img class="service-block-img" src="img/bigtruck.png" width="468" height="261" alt="трак">
             </div>
           </div>
-          <div class="service-block service-block-guarantee visually-hidden">
-            <h3>ГАРАНТИЯ</h3>
-            <p>Если купленный у нас товар поломается или заискрит, <br>
-              а также в случае пожара, спровоцированного его <br>
-              возгоранием, вы всегда можете быть уверены в нашей <br>
-              гарантии. Мы обменяем сгоревший товар на новый. <br>
-              Дом уж восстановите как-нибудь сами.</p>
-            <img src="img/medal.png" width="389" height="283" alt="медаль">
+          <div class="service-block service-block-guarantee visually-hidden" id='service-guarantee'>
+            <div>
+              <h3>ГАРАНТИЯ</h3>
+              <p>Если купленный у нас товар поломается или заискрит, <br>
+                а также в случае пожара, спровоцированного его <br>
+                возгоранием, вы всегда можете быть уверены в нашей <br>
+                гарантии. Мы обменяем сгоревший товар на новый. <br>
+                Дом уж восстановите как-нибудь сами.</p>
+              <img class="service-block-img" src="img/medal.png" width="389" height="283" alt="медаль">
+            </div>
           </div>
-          <div class="service-block service-block-credit visually-hidden">
-            <h3>КРЕДИТ</h3>
-            <p>Залезть в долговую яму стало проще! <br>
-              Кредитные консультанты придут вам на помощь.</p>
-            <img src="img/credit.png" width="465" height="285" alt="кредит">
-            <a href="#">отправить заявку</a>
+          <div class="service-block service-block-credit visually-hidden" id='service-credit'>
+            <div>
+              <h3>КРЕДИТ</h3>
+              <p>Залезть в долговую яму стало проще! <br>
+                Кредитные консультанты придут вам на помощь.</p>
+              <a class="button" href="#">отправить заявку</a>
+              <img class="service-block-img" src="img/credit.png" width="465" height="285" alt="кредит">
+            </div>
           </div>
         </div>
       </section>
@@ -420,12 +448,12 @@
               <li>
                 <a class="social-button" href="#">
                   <svg height="14" width="25" class="icon">
-                    <use xlink:href="#Shape"></use>
+                    <use xlink:href="#vk"></use>
                   </svg></a>
               </li>
               <li>
                 <a class="social-button" href="#"> <svg height="22" width="12" class="icon">
-                    <use xlink:href="#Shape (1)"></use>
+                    <use xlink:href="#fb"></use>
                   </svg></a>
               </li>
               <li>
@@ -452,33 +480,35 @@
   <section class="modal modal-login">
     <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal-wrap">
-      <div class="modal-name-wrap">
-      <span>
-        <p class="modal-description">Ваше имя:</p>
-        <label class="visually-hidden" for="name-form">Ваше имя:</label>
-        <input class="name-user" id="name-form" type="text" name="name" placeholder="Имя Фамилия">
-      </span>
-      <span>
-        <p class="modal-description">Ваш e-mail:</p>
-        <label class="visually-hidden" for="email-form">Ваш e-mail:</label>
-        <input class="email-user" id="email-form" type="email" name="login" placeholder="email@example.com">
-      </span>
-    </div>
-      <p>
-        <lebel for="textarea">Текст письма:</lebel><br>
-        <textarea id="textarea" rows="3">В свободной форме </textarea><br>
-      </p>
-    </div>
+        <div class="modal-name-wrap">
+          <span>
+            <span class="modal-description">Ваше имя:</span>
+            <label class="visually-hidden" for="name-form">Ваше имя:</label>
+            <input class="name-user" id="name-form" type="text" name="name" placeholder="Имя Фамилия">
+          </span>
+          <span>
+            <span class="modal-description">Ваш e-mail:</span>
+            <label class="visually-hidden" for="email-form">Ваш e-mail:</label>
+            <input class="email-user" id="email-form" type="email" name="login" placeholder="email@example.com">
+          </span>
+        </div>
+        <p>
+          <span>Текст письма:</span><br>
+          <textarea id="textarea" rows="3">В свободной форме </textarea><br>
+        </p>
+      </div>
       <div class="button-wrapper">
         <button class="button" type="submit">ОТПРАВИТЬ</button>
       </div>
     </form>
-     <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
   <section class="modal modal-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" 
-    width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+      width="943" height="449" allowfullscreen
+      title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
@@ -551,20 +581,25 @@
         d="M27.406 71.877c3.193 0 5.781-2.553 5.781-5.702 0-3.15-2.588-5.702-5.781-5.702-3.193 0-5.781 2.553-5.781 5.702s2.588 5.702 5.781 5.702zm17.438 0c3.193 0 5.781-2.553 5.781-5.702 0-3.15-2.588-5.702-5.781-5.702-3.193 0-5.781 2.553-5.781 5.702s2.588 5.702 5.781 5.702zM29.335 10.553l7.547 5.416a2.007 2.007 0 0 0 2.818-.487 2.066 2.066 0 0 0-.48-2.855l-2.373-1.703 9.436-5.02 4.628 11.85h4.347L49.214 2.276a2.037 2.037 0 0 0-1.177-1.166 1.995 1.995 0 0 0-1.643.107l-13.248 7.05-3.022-2.17a2.004 2.004 0 0 0-2.742.385l-8.481 10.65c-.17.182-.307.392-.405.62h5.106l5.733-7.2z"
         fill="#FFFFFF"></path>
     </symbol>
-    <symbol viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-insta">
+    <symbol role="img" aria-label="Логотип инстаграм" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+      id="icon-insta">
       <path fill-rule="evenodd" clip-rule="evenodd"
         d="M3 0h15c1.65 0 3 1.35 3 3v15c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7 10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5zM3 18V9h1.181A6.48 6.48 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.451 6.451 0 0 0-.181-1.5H18v9H3zM14 7h4V3h-4v4z"
         fill="#fff"></path>
     </symbol>
-    <symbol viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg" id="Shape (1)">
+    <symbol role="img" aria-label="Логотип фэйсбук" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+      id="fb">
       <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"></path>
     </symbol>
-    <symbol viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="Shape">
+    <symbol role="img" aria-label="Логотип Вконтакте" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+      id="vk">
       <path
         d="M15.54 11.728c.92-.29 2.1 1.913 3.354 2.755.942.639 1.663.501 1.663.501l3.345-.047s1.747-.105.921-1.457c-.068-.112-.484-1.002-2.489-2.833-2.096-1.915-1.812-1.605.712-4.916 1.538-2.019 2.153-3.251 1.96-3.776-.185-.506-1.314-.374-1.314-.374l-3.768.025c-.367 0-.678.111-.82.483-.003.003-.598 1.562-1.391 2.886-1.677 2.802-2.346 2.952-2.623 2.776-.637-.406-.476-1.628-.476-2.497 0-2.716.416-3.849-.815-4.141-.411-.098-.711-.161-1.76-.17-1.34-.02-2.479 0-3.124.308-.428.209-.757.667-.557.693.25.033.811.15 1.112.55.386.517.374 1.677.374 1.677s.22 3.198-.52 3.594c-.508.272-1.203-.283-2.699-2.827-.763-1.301-1.34-2.74-1.34-2.74s-.112-.267-.314-.413a1.583 1.583 0 0 0-.578-.229L.817 1.58s-.538.015-.735.245c-.175.205-.015.627-.015.627s2.802 6.45 5.974 9.7c2.908 2.983 6.213 2.785 6.213 2.785h1.497s.452-.05.683-.292c.216-.225.206-.648.206-.648s-.03-1.977.9-2.268z"
         fill="#fff"></path>
     </symbol>
   </svg>
+  <script src="js/sliderServices.js"></script>
+  <script src="js/slider.js"></script>
   <script src="js/map.js"></script>
   <script src="js/login.js"></script>
 </body>
