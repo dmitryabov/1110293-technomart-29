@@ -107,6 +107,8 @@ body {
   align-items: center;
   background-color: var(--basic-ferrara-blue);
   padding-bottom: 0px;
+  flex-wrap: wrap;
+  width: 940px;
 }
 
 .main-menu-logo {
@@ -214,6 +216,7 @@ body {
   display: flex;
   min-height: 45px;
   margin: 0px;
+  flex-wrap: wrap;
 }
 
 .main-header a {
@@ -238,8 +241,7 @@ body {
   display: flex;
   padding: 0px;
   margin: 0px;
-  margin-top: 2px;
-  min-width: 150px;
+  min-width: 136px;
   justify-content: center;
 }
 
@@ -259,7 +261,6 @@ body {
 .search-field:active {
   background-color: var(--basic-white)
 }
-
 
 
 .visually-hidden {
@@ -372,12 +373,24 @@ body {
   width: 270px;
 }
 
+.item-cart {
+  background-color: var(--basic-red);
+  min-height: 42px;
+}
+
+.item-bookmark {
+  width: 160px;
+}
+
 /* Main-info */
 
 .main-info i {
   color: var(--basic-red);
   font-size: 16px;
   line-height: 23px;
+  font-family: Cuprum;
+font-style: italic;
+font-weight: normal;
 }
 
 .main-contacts {
@@ -414,7 +427,6 @@ body {
   color: var(--basic-greylight-light);
   font-size: 14px;
   line-height: 24px;
-  margin-left: 15px;
 }
 
 .main-login a {
@@ -430,7 +442,7 @@ body {
 
 .main-login svg {
   fill: var(--basic-greylight);
-  margin-right: 5px;
+  margin-right: 15px;
   margin-left: 20px;
 }
 
@@ -445,6 +457,7 @@ body {
 .main-login-button-singup:nth-child(2) {
   min-width: 150px;
 }
+
 
 .main-login-button:hover {
   color: var(--basic-red);
@@ -461,6 +474,7 @@ body {
 .main-login-button:hover svg {
   fill: var(--basic-greylight);
 }
+
 
 /* Main-navigation */
 
@@ -481,6 +495,34 @@ body {
   padding: 17px 28px;
 }
 
+
+.main-login-wrapper .user-menu {
+  font-size: 16px;
+  line-height: 18px
+}
+
+.user-menu-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 7px 0px;
+  padding: 0px 25px;
+}
+
+.user-menu:nth-child(2) {
+  position: relative;
+}
+
+.user-menu:nth-child(2)::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 6px; 
+  height: 6px;
+  background: var(--basic-ferrara-dark);
+  border-radius: 50%;
+  top: 5px;
+  right: 120px;
+}
 
 /* Main-container */
 
