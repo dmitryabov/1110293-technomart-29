@@ -1,32 +1,25 @@
-let serviceBlocks = document.querySelectorAll('.service-block');
+const HIDDEN = "visually-hidden";
 
-let servicesForm = document.querySelectorAll('.services-input-checkbox');
+const serviceBlocks = document.querySelectorAll(".service-block");
+const servicesForm = document.querySelectorAll(".services-input-checkbox");
 
 let lastClicked = servicesForm[0];
 
-
-var slovar = {
+const dictionary = {
   deliveryField: `service-delivery`,
   guaranteeField: `service-guarantee`,
-  creditField: `service-credit`
-}
+  creditField: `service-credit`,
+};
 
+for (let i = 0; i < servicesForm.length; i++) {
+  servicesForm[i].addEventListener("click", function () {
+    document
+      .getElementById(`${dictionary[lastClicked.id]}`)
+      .classList.add(HIDDEN);
 
-
-for( let i = 0; i < servicesForm.length; i++ ){
-  servicesForm[i].addEventListener('click', function(){
-   
-    document.getElementById(`${slovar[lastClicked.id]}`).classList.add('visually-hidden');
-   
-    document.getElementById(`${slovar[this.id]}`).classList.remove('visually-hidden');
-    lastClicked = this; 
-  
+    document
+      .getElementById(`${dictionary[this.id]}`)
+      .classList.remove(HIDDEN);
+    lastClicked = this;
   });
 }
-
-
-
-
-
-
-

@@ -1,31 +1,21 @@
-let sliderButtonNext = document.querySelector('.slider-button-next');
-let sliderButtonBack = document.querySelector('.slider-button-back');
-let slider = document.querySelector('.slider');
+const sliderButtonNext = document.querySelector(".slider-button-next");
+const sliderButtonBack = document.querySelector(".slider-button-back");
+const slider = document.querySelector(".slider");
+const sliders = document.querySelectorAll(".slider-list");
 
-let sliders = document.querySelectorAll('.slider-list');
+const sliderData = ["url(img/perforators.png)", "url(img/drill.png)"];
 
 let currentSlide = 0;
 
+const clickButtonHendle = function () {
+  sliders[currentSlide].classList.add("visually-hidden");
+  currentSlide = (currentSlide + 1) % sliders.length;
 
-sliderButtonBack.onclick = function(){
-    sliders[currentSlide].classList.add("visually-hidden");
-    currentSlide = currentSlide - 1;
-    if( currentSlide < 0){
-        currentSlide = sliders.length - 1;  
-    }
-    sliders[currentSlide].classList.remove("visually-hidden");
+  sliders[currentSlide].classList.remove("visually-hidden");
+
+  slider.style.backgroundImage = sliderData[currentSlide];
 };
 
+sliderButtonBack.addEventListener("click", clickButtonHendle);
 
-
-sliderButtonNext.onclick = function(){
-    sliders[currentSlide].classList.add("visually-hidden");
-    currentSlide = currentSlide + 1; 
-    if( currentSlide >= sliders.length){
-        currentSlide = 0;  
-    }
-    sliders[currentSlide].classList.remove("visually-hidden");
-    if (currentSlide % 2 ) {
-      slider.style.backgroundImage = 'url(img/drill.png)';
-    } else  slider.style.backgroundImage = 'url(img/perforators.png)';
-};
+sliderButtonNext.addEventListener("click", clickButtonHendle);
