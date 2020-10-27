@@ -85,6 +85,10 @@ body {
   border: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Main menu */
 
 .container-catalog {
