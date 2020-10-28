@@ -1,20 +1,23 @@
-const contactsButton = document.querySelector(".contacts-button");
-const loginPopup = document.querySelector(".modal-login");
-const contactsClose = loginPopup.querySelector(".modal-close");
-const mailForm = loginPopup.querySelector(".mail-form");
-const nameUser = loginPopup.querySelector(".name-user");
-const emailUser = loginPopup.querySelector(".email-user");
+const contactsButton = document.querySelector(".contacts-button"); //открываю модалку
+const loginPopup = document.querySelector(".modal-login");//модалка
+const contactsClose = loginPopup.querySelector(".modal-close"); //закрыть модалку
+const mailForm = loginPopup.querySelector(".mail-form");//forma
+const nameUser = loginPopup.querySelector(".name-user");// инпут ввода логина
+const emailUser = loginPopup.querySelector(".email-user"); // инпут ввода email
 
 const isStorageSupport = true;
 const storage = "";
 
+
 contactsButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   loginPopup.classList.add("modal-show");
+ 
   if (storage) {
     nameUser.value = storage;
-  }
-  nameUser.focus();
+    nameUser.focus();
+  } else
+  emailUser.focus();
 });
 
 contactsClose.addEventListener("click", function (evt) {
@@ -40,6 +43,7 @@ window.addEventListener("keydown", function (evt) {
       evt.preventDefault();
       loginPopup.classList.remove("modal-show");
       loginPopup.classList.remove("modal-error");
+      
     }
   }
 });
