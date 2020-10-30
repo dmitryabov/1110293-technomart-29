@@ -55,7 +55,7 @@
 /* Global */
 
 body {
-  min-width: 1200px;
+  min-width: 940px;
   margin: 0;
   padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -158,7 +158,7 @@ body {
 .new-card::before {
   content: attr(data-status);
   position: absolute;
-  font-family: "Cuprum";
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   display: flex;
   justify-content: center;
@@ -487,6 +487,7 @@ body {
   padding: 17px 28px;
 }
 
+
 .main-login-wrapper .user-menu {
   font-size: 16px;
   line-height: 18px;
@@ -497,6 +498,12 @@ body {
   justify-content: space-around;
   margin: 7px 0px;
   padding: 0px 25px;
+}
+
+.user-menu-wrapper a {
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
 }
 
 .user-menu-cabinet {
@@ -519,10 +526,6 @@ body {
 
 .container {
   background-color: var(--basic-white);
-}
-
-.container-wrapper {
-  padding: 0 10px;
 }
 
 .features {
@@ -681,9 +684,33 @@ body {
   margin-left: 24px;
 }
 
-.slider-button {
+.slider-buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 740px;
+  left: 540px;
+  z-index: 20;
+  display: flex;
+  width: 30px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: var(--basic-red);
 }
 
 .slider-button-back {
@@ -735,6 +762,14 @@ body {
   font-size: 14px;
   min-height: 38px;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--basic-red-dark);
+}
+
+.button:active {
+  background-color: var(--error);
 }
 
 /* products */
@@ -792,7 +827,7 @@ body {
 }
 
 .firms {
-  padding-bottom: 65px;
+  padding-bottom: 55px;
 }
 
 .products-item {
@@ -1111,7 +1146,7 @@ body {
   padding-bottom: 71px;
 }
 
-.company-info div h2 {
+.company-info h2 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -1124,7 +1159,7 @@ body {
   min-width: 300px;
 }
 
-.company-contacts-wrapper button {
+.company-contacts-wrapper .contacts-button {
   min-width: 300px;
   margin-top: 25px;
 }
@@ -1211,6 +1246,7 @@ body {
 
 .page-footer-wrapper {
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .page-info-wrapper {
@@ -1243,7 +1279,7 @@ body {
 .products-wrapper {
   display: flex;
   margin-top: 0px;
-  transform: translateX(22px);
+  margin-left: 22px;
 }
 
 .footer-info {
@@ -1569,13 +1605,13 @@ body {
   margin: 0;
 }
 
-fieldset {
+.filter-fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-fieldset legend {
+.filter-fieldset legend {
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -1616,6 +1652,10 @@ fieldset legend {
   display: block;
   cursor: pointer;
   user-select: none;
+}
+
+.filter-input[disabled] + label{
+  opacity: 0.4;
 }
 
 .filter-input-checkbox + label::before {

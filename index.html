@@ -13,6 +13,7 @@
     />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.min.css" rel="stylesheet" />
   </head>
 
   <body class="page-body">
@@ -65,7 +66,7 @@
                   <svg height="15" width="15">
                     <use xlink:href="#cart"></use>
                   </svg>
-                  <span>Корзина: 0</span>
+                  <span>Корзина: 1</span>
                 </a>
               </li>
             </ul>
@@ -182,9 +183,13 @@
                   <h3>ДРЕЛИ</h3>
                   <span>Соседям на радость</span>
                 </div>
-                <div class="slider-button">
+                <div class="slider-buttons">
                   <span class="slider-button slider-button-back"></span>
                   <span class="slider-button slider-button-next"></span>
+                </div>
+                <div class="slider-controls">
+                  <button class="slider-control slider-control-one current" type="button" aria-label="Первый слайд"></button>
+                  <button class="slider-control slider-control-two"type="button" aria-label="Второй слайд"></button>
                 </div>
                 <a class="button" href="catalog.html">открыть каталог</a>
               </section>
@@ -202,7 +207,7 @@
                 <div class="product-inner">
                   <div class="img-wrap">
                     <img
-                      src="img/bfg9000.png"
+                      src="img/bfg9000.jpg"
                       width="184"
                       height="164"
                       alt="Перфоратор BOSCH BFG 9000"
@@ -241,7 +246,7 @@
                 <div class="product-inner">
                   <div class="img-wrap">
                     <img
-                      src="img/bfg3000.png"
+                      src="img/bfg3000.jpg"
                       width="127"
                       height="112"
                       alt="Перфоратор BOSCH BFG 3000"
@@ -277,7 +282,7 @@
                 <div class="product-inner">
                   <div class="img-wrap">
                     <img
-                      src="img/bfg6000.png"
+                      src="img/bfg6000.jpg"
                       width="144"
                       height="128"
                       alt="Перфоратор BOSCH BFG 6000"
@@ -313,7 +318,7 @@
                 <div class="product-inner">
                   <div class="img-wrap">
                     <img
-                      src="img/bfg2000.png"
+                      src="img/bfg2000.jpg"
                       width="127"
                       height="112"
                       alt="Перфоратор BOSCH BFG 2000"
@@ -465,7 +470,13 @@
                 />
                 <label for="creditField">Кредит</label>
               </form>
-              <img class="services-form-line" src="img/line.png" height="279" width= "10" alt="line" />
+              <img
+                class="services-form-line"
+                src="img/line.png"
+                height="279"
+                width="10"
+                alt="line"
+              />
             </div>
 
             <div
@@ -574,9 +585,9 @@
                 height="158"
                 alt="карта"
               />
-              <button class="button contacts-button" type="button">
+              <a class="button contacts-button" type="button">
                 Заблудились? Напишите НАМ!
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -605,7 +616,7 @@
               <ul class="navigation-wrapper">
                 <li><a href="#">Компания</a></li>
                 <li><a href="#">Новости</a></li>
-                <li><a href="#">Каталог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
@@ -694,9 +705,9 @@
             </span>
           </div>
           <p>
-            <span>Текст письма:</span><br/>
+            <span>Текст письма:</span><br />
             <label class="visually-hidden" for="textarea"></label>
-            <textarea id="textarea" rows="3">В свободной форме </textarea><br/>
+            <textarea id="textarea" rows="3">В свободной форме </textarea><br />
           </p>
         </div>
         <div class="button-wrapper">
@@ -890,5 +901,6 @@
     <script src="js/slider.js"></script>
     <script src="js/map.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/index.min.js"></script>
   </body>
 </html>

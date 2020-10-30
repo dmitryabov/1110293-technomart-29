@@ -13,6 +13,7 @@
     />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.min.css" rel="stylesheet" />
   </head>
 
   <body class="page-body">
@@ -57,7 +58,7 @@
                   <svg height="15" width="15">
                     <use xlink:href="#bookmark"></use>
                   </svg>
-                  <span> Закладки: 0</span>
+                  <span> Закладки: 1</span>
                 </a>
               </li>
               <li class="main-menu-item item-cart">
@@ -105,8 +106,8 @@
                 ></a>
               </p>
               <p class="user-menu-wrapper">
-                <span class="user-menu user-menu-orders">Мои заказы</span>
-                <span class="user-menu user-menu-cabinet">Личный кабинет</span>
+                <a hreh="#" title="переход в заказы"><span class="user-menu user-menu-orders">Мои заказы</span></a>
+                <a hreh="#" title="переход в кабинет"><span class="user-menu user-menu-cabinet">Личный кабинет</span></a>
               </p>
             </div>
           </section>
@@ -132,11 +133,13 @@
         <section class="catalog-nav-items">
           <ul class="nav-items">
             <li>
+              <a href="index.html">
               <svg height="12" width="14">
                 <use xlink:href="#catalog-home"></use>
               </svg>
+            </a>
             </li>
-            <li class="nav-item-catalog"><a href="index.html">КАТАЛОГ</a></li>
+            <li class="nav-item-catalog">КАТАЛОГ</li>
             <li class="nav-item-catalog"><a>ИНСТРУМЕНТ</a></li>
             <li class="nav-item-catalog"><a>ПЕРФОРАТОРЫ</a></li>
           </ul>
@@ -153,7 +156,7 @@
               method="get"
               action="https://echo.htmlacademy.ru"
             >
-              <fieldset class="filter-item">
+              <fieldset class="filter-fieldset filter-item ">
                 <legend>ЦЕНА:</legend>
                 <div class="range-filter">
                   <div class="range-controls">
@@ -167,11 +170,13 @@
                       class="toggle toggle-min"
                       tabindex="0"
                       style="left: 8%"
+                      aria-label="уменьшает значение фильтра"
                     ></div>
                     <div
                       class="toggle toggle-max"
                       tabindex="0"
                       style="left: 73%"
+                      aria-label="увеличивает значение фильтра"
                     ></div>
                   </div>
                   <div class="price-controls">
@@ -184,7 +189,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="product-filter-checkbox">
+              <fieldset class="filter-fieldset product-filter-checkbox">
                 <legend class="product-filter">Производители:</legend>
                 <ul>
                   <li class="filter-option filter-radio">
@@ -194,7 +199,7 @@
                       name="product-group"
                       value="shaving"
                       id="filter-shave"
-                    />
+                    disabled/>
                     <label for="filter-shave">BOSCH</label>
                   </li>
                   <li class="filter-option filter-radio">
@@ -205,6 +210,7 @@
                       value="hair-care"
                       id="filter-care"
                       checked
+                      disabled
                     />
                     <label for="filter-care">ИНТЕРСКОЛ</label>
                   </li>
@@ -240,7 +246,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="product-filter-radio">
+              <fieldset class="filter-fieldset product-filter-radio">
                 <legend class="product-filter">Питание:</legend>
                 <ul>
                   <li class="filter-option filter-radio">
@@ -261,6 +267,7 @@
                       value="hair-care"
                       id="filter-cite"
                       checked
+                      disabled
                     />
                     <label for="filter-cite">СЕТЕВЫЕ</label>
                   </li>
@@ -319,7 +326,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg6000.png"
+                        src="img/bfg6000.jpg"
                         width="144"
                         height="128"
                         alt="Перфоратор BOSCH BFG 6000"
@@ -355,7 +362,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg6000.png"
+                        src="img/bfg6000.jpg"
                         width="144"
                         height="128"
                         alt="Перфоратор BOSCH BFG 6000"
@@ -391,7 +398,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg6000.png"
+                        src="img/bfg6000.jpg"
                         width="144"
                         height="128"
                         alt="Перфоратор BOSCH BFG 6000"
@@ -430,7 +437,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg3000.png"
+                        src="img/bfg3000.jpg"
                         width="127"
                         height="112"
                         alt="Перфоратор BOSCH BFG 3000"
@@ -466,7 +473,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg6000.png"
+                        src="img/bfg6000.jpg"
                         width="144"
                         height="128"
                         alt="Перфоратор BOSCH BFG 6000"
@@ -505,7 +512,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg2000.png"
+                        src="img/bfg2000.jpg"
                         width="127"
                         height="112"
                         alt="Перфоратор BOSCH BFG 2000"
@@ -544,7 +551,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg3000.png"
+                        src="img/bfg3000.jpg"
                         width="127"
                         height="112"
                         alt="Перфоратор BOSCH BFG 3000"
@@ -580,7 +587,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg6000.png"
+                        src="img/bfg6000.jpg"
                         width="144"
                         height="128"
                         alt="Перфоратор BOSCH BFG 6000"
@@ -619,7 +626,7 @@
                   <div class="product-inner">
                     <div class="img-wrap">
                       <img
-                        src="img/bfg2000.png"
+                        src="img/bfg2000.jpg"
                         width="127"
                         height="112"
                         alt="Перфоратор BOSCH BFG 2000"
@@ -981,5 +988,6 @@
       </symbol>
     </svg>
     <script src="js/catalog.js"></script>
+    <script src="js/catalog.min.js"></script>
   </body>
 </html>
